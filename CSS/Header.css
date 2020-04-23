@@ -1,0 +1,87 @@
+.h {
+    height: 100%;
+    position: fixed;
+    width: 25%;
+    background-color: rgba(41, 41, 41, 1);
+}
+#h_0 {
+    height: 100%;
+    background-color: rgba(41, 41, 41, 1);
+}
+#h_0_0 {
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+    border-color: rgba(255, 0, 0, 1);
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2.5px;
+}
+#h_0_0_0 {
+    height: calc(100% - 20px);
+    padding: 10px;
+    width: calc(100% - 20px);
+    border-radius: 10px;
+}
+#h_0_1 {
+    height: 50%;
+    margin: 30px auto;
+    overflow: auto;
+}
+#h_0_1_0, /**/ #h_0_1_1 {
+    border-color: rgba(255, 0, 0, 1);
+    border-style: solid;
+    border-width: 0 2.5px 2.5px 0;
+}
+#h_0_1_0_0, /**/ #h_0_1_1_0 {
+    width: 80%;
+    margin-top: 10px;
+}
+#h_0_1_0_0_0, /**/ #h_0_1_1_0_0 {
+    color: rgba(255, 255, 255, 1);
+    display: inline-block;
+    padding: 10px;
+    width: calc(70% - 20px);
+    background-color: rgba(255, 0, 0, 1);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+#h_0_1_0_0_1, /**/ #h_0_1_1_0_1 {
+    color: rgba(255, 0, 0, 1);
+    display: inline-block;
+    padding: 7.5px;
+    float: left;
+    width: calc(30% - 20px);
+    border-color: rgba(255, 0, 0, 1);
+    border-style: solid;
+    border-width: 2.5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#h_0_1_0_2, /**/ #h_0_1_1_2 {
+    color: rgba(255, 0, 0, 1);
+    padding: 10px;
+}
+#h_0_1_0_2_0, #h_0_1_0_2_1, #h_0_1_0_2_2, #h_0_1_0_2_3, /**/ #h_0_1_1_2_0, #h_0_1_1_2_1, #h_0_1_1_2_2, #h_0_1_1_2_3 {
+    color: rgba(255, 255, 255, 1);
+    line-height: 30px;
+    text-decoration: none;
+}
+#h_0_1_1_2_0:hover, #h_0_1_1_2_1:hover, #h_0_1_1_2_2:hover, #h_0_1_1_2_3:hover {
+    color: rgba(255, 255, 255, 1);
+    line-height: 30px;
+    text-decoration: underline;
+}
+#h_1 {
+    bottom: 0;
+    color: rgba(255, 255, 255, 1);
+    padding: 20px;
+    position: absolute;
+    width: calc(100% - 40px);
+    background-color: rgba(255, 0, 0, 1);
+    text-align: center;
+}
