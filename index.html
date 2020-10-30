@@ -135,8 +135,12 @@ var bcMg = [
     "https://i.ytimg.com/vi/Apim2QeRVf4/maxresdefault.jpg"
 ];
 function sld() {
-    document.getElementsByClassName("sld-shw")[0].style.height = window.innerHeight + "px";
-    document.getElementsByClassName("sld-bcmg")[0].style.height = window.innerHeight + "px";
+    for (const i of document.getElementsByClassName("sld-shw")) {
+        i.style.height = window.innerHeight + "px";
+    };
+    for (const i of document.getElementsByClassName("sld-bcmg")) {
+        i.style.height = window.innerHeight + "px";
+    };
     for (const i of document.getElementsByClassName("sld-chld")) {
         i.style.width = ((window.innerWidth) - (document.getElementsByClassName("sld-btn")[0].clientWidth + document.getElementsByClassName("sld-btn")[1].clientWidth)) + "px";
     };
@@ -163,6 +167,7 @@ for (const i of document.getElementsByClassName("sld-chld")) {
 };
 document.getElementsByClassName("sld-chld")[0].style.display = "block";
 var sldIndex;
+var status = 1;
 var i = 0;
 function sldShw(sldIndx) {
     i = i + sldIndx;
@@ -175,20 +180,28 @@ function sldShw(sldIndx) {
         ic.style.display = "none";
         document.getElementsByClassName("sld-chld")[i].style.display = "block";
     };
+    status = 0;
     bcMgF();
 };
 function sldAuto() {
     i = i + 1;
-    if (i >= document.getElementsByClassName("sld-chld").length) {
-        i = 0;
-    } else if (i <= -1) {
-        i = document.getElementsByClassName("sld-chld").length - 1;
+    if (status == 1) {
+        if (i >= document.getElementsByClassName("sld-chld").length) {
+            i = 0;
+        } else if (i <= -1) {
+            i = document.getElementsByClassName("sld-chld").length - 1;
+        };
+        for (const ic of document.getElementsByClassName("sld-chld")) {
+            ic.style.display = "none";
+            document.getElementsByClassName("sld-chld")[i].style.display = "block";
+        };
+        bcMgF();
+    } else {
+        clearInterval();
+        setTimeout(function () {
+            status = 1;
+        }, 5000)
     };
-    for (const ic of document.getElementsByClassName("sld-chld")) {
-        ic.style.display = "none";
-        document.getElementsByClassName("sld-chld")[i].style.display = "block";
-    };
-    bcMgF();
 };
 setInterval(sldAuto, 3000);
 sldAuto();
